@@ -2,6 +2,8 @@ import * as commands from "./commands/_mod.ts";
 import { STR_CLI_HELP } from "../_strings.ts";
 import { Logger } from "../logger/mod.ts";
 
+const logger = new Logger()
+
 function parseArgs(args: string[]) {
   if (args.length == 0) {
     console.log(STR_CLI_HELP());
@@ -29,13 +31,18 @@ function parseArgs(args: string[]) {
 }
 
 function main(args: string[]): void {
-  // new Logger().debug("debug");
-  // new Logger().info("info");
-  // new Logger().warn("warn");
-  // new Logger().error("error");
-  // new Logger().fatal("fatal");
+  try {
+    // new Logger().debug("debug");
+    // new Logger().info("info");
+    // new Logger().warn("warn");
+    // new Logger().error("error");
+    // new Logger().fatal("fatal");
 
-  parseArgs(args);
+    parseArgs(args);
+  } catch (e) {
+    logger.fatal(e.toString());
+    Deno.exit(-1);
+  }
 }
 
 main(Deno.args);

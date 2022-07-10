@@ -24,9 +24,15 @@
   "tasks": {
     "run": "deno run --allow-all src/cli/mod.ts",
     "run:example": "deno task run run ./examples/example.workflow.ts",
-    "upgrade": "deno cache --reload https://raw.githubusercontent.com/SHIBUI-ENGINEERING/MAT/main/src/cli/mod.ts",
-    "install": "deno install --allow-all -f -n mwat-dev https://raw.githubusercontent.com/SHIBUI-ENGINEERING/MAT/main/src/cli/mod.ts",
-    "uninstall": "deno uninstall mwat-dev",
+
+    "upgrade:latest": "deno cache --reload https://raw.githubusercontent.com/SHIBUI-ENGINEERING/MAT/main/src/cli/mod.ts",
+    "install:latest": "deno install --allow-all -f -n mwat-latest https://raw.githubusercontent.com/SHIBUI-ENGINEERING/MAT/main/src/cli/mod.ts",
+    "uninstall:latest": "deno uninstall mwat-latest",
+
+    "upgrade:dev": "deno cache --reload https://raw.githubusercontent.com/SHIBUI-ENGINEERING/MAT/develop/src/cli/mod.ts",
+    "install:dev": "deno install --allow-all -f -n mwat-dev https://raw.githubusercontent.com/SHIBUI-ENGINEERING/MAT/develop/src/cli/mod.ts",
+    "uninstall:dev": "deno uninstall mwat-dev",
+
     "test": ""
   }
 }
