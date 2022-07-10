@@ -1,6 +1,6 @@
 # MWAT
 
-Micro Workflow Automation Tool
+Micro Workflow Automation Tool - is a simple tool designed to automate simple workflows consisting of a sequence of tasks
 
 ## instalation:
 

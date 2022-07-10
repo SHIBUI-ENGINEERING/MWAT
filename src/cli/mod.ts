@@ -1,5 +1,6 @@
 import * as commands from "./commands/_mod.ts";
 import { STR_CLI_HELP } from "../_strings.ts";
+import { Logger } from "../logger/mod.ts";
 
 function parseArgs(args: string[]) {
   if (args.length == 0) {
@@ -26,6 +27,8 @@ function parseArgs(args: string[]) {
 }
 
 function main(args: string[]): void {
+  new Logger().debug("test debug log");
+
   parseArgs(args);
 }
 

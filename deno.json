@@ -23,7 +23,9 @@
   },
   "tasks": {
     "run": "deno run --allow-all src/cli/mod.ts",
-    "install": "deno install --allow-all -f -n mat https://raw.githubusercontent.com/SHIBUI-ENGINEERING/MAT/main/src/cli/mod.ts",
+    "upgrade": "deno cache --reload https://raw.githubusercontent.com/SHIBUI-ENGINEERING/MAT/main/src/cli/mod.ts",
+    "install": "deno install --allow-all -f -n mwat-dev https://raw.githubusercontent.com/SHIBUI-ENGINEERING/MAT/main/src/cli/mod.ts",
+    "uninstall": "deno uninstall mwat-dev",
     "test": ""
   }
 }

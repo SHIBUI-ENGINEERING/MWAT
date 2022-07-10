@@ -9,7 +9,7 @@ USAGE:
   mwat [SUBCOMMAND] [OPTIONS]
 
 SUBCOMMANDS:
-1) run {path_to_workflow.ts}
+1) run {PATH_TO_WORKFLOW}
 2) help
 3) version
 4) upgrade
