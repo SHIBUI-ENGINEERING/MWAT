@@ -13,7 +13,7 @@ export async function run(args: string[]) {
   const relatiovePath = args[0];
   const absolutePath = resolve(Deno.cwd(), relatiovePath);
 
-  console.log(relatiovePath, absolutePath);
+  console.log("PATHS:", Deno.cwd(), relatiovePath, absolutePath);
 
   const workflowModule = await import(absolutePath);
 
