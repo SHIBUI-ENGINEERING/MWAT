@@ -17,6 +17,9 @@ SUBCOMMANDS:
 4) ${GREEN("upgrade")}
 `;
 
+export const STR_CLI_HELP_RUN = () => `
+`;
+
 export const STR_CLI_NEW_VESRSIN = (
   currentVersion: string,
   newVersion: string,

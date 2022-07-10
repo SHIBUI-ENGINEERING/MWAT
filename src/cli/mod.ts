@@ -8,18 +8,20 @@ function parseArgs(args: string[]) {
     return;
   }
 
+  const commandArgs = args.slice(1);
+
   switch (args[0]) {
     case "help":
-      commands.help(args);
+      commands.help(commandArgs);
       break;
     case "version":
-      commands.version(args);
+      commands.version(commandArgs);
       break;
     case "upgrade":
-      commands.upgrade(args);
+      commands.upgrade(commandArgs);
       break;
     case "run":
-      commands.run(args);
+      commands.run(commandArgs);
       break;
     default:
       commands.help(args);
@@ -27,11 +29,11 @@ function parseArgs(args: string[]) {
 }
 
 function main(args: string[]): void {
-  new Logger().debug("debug");
-  new Logger().info("info");
-  new Logger().warn("warn");
-  new Logger().error("error");
-  new Logger().fatal("fatal");
+  // new Logger().debug("debug");
+  // new Logger().info("info");
+  // new Logger().warn("warn");
+  // new Logger().error("error");
+  // new Logger().fatal("fatal");
 
   parseArgs(args);
 }
