@@ -1,3 +1,5 @@
+import { colorize, COLORS } from "./_colors.ts";
+
 export enum LEVEL {
   LOG,
   DEBUG,
