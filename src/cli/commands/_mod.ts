@@ -1,9 +1,6 @@
 import { run } from "./_run.ts";
-import { update } from "./_update.ts";
+import { upgrade } from "./_upgrade.ts";
 import { help } from "./_help.ts";
+import { version } from "./_version.ts";
 
-export default {
-  run,
-  update,
-  help,
-};
+export { help, run, upgrade, version };
