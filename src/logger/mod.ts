@@ -1,3 +1,5 @@
-import { LEVEL, Logger } from "./_log.ts";
+import { LEVEL } from "./_levels.ts";
+import { Logger } from "./_log.ts";
+import * as colors from "./colors.ts";
 
-export { LEVEL, Logger };
+export { colors, LEVEL, Logger };

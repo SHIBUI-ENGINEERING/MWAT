@@ -27,6 +27,12 @@ function parseArgs(args: string[]) {
 }
 
 function main(args: string[]): void {
+  new Logger().debug("debug");
+  new Logger().info("info");
+  new Logger().warn("warn");
+  new Logger().error("error");
+  new Logger().fatal("fatal");
+
   parseArgs(args);
 }
 

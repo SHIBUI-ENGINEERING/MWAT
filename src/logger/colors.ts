@@ -6,6 +6,8 @@ export enum COLOR {
   MAGANTA,
   YELLOW,
   CYAN,
+  ORANGE,
+  PURPLE,
 }
 
 const COLOR_CODES: string[] = [
@@ -16,6 +18,8 @@ const COLOR_CODES: string[] = [
   "\u001b[35m",
   "\u001b[33m",
   "\u001b[36m",
+  "",
+  "\u001b[95m",
 ];
 
 export function colorize(color: COLOR, str: string): string {
