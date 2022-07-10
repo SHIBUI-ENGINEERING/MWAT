@@ -1,3 +1,3 @@
-export function version() {
-  console.log("version!");
+export function version(args: string[]) {
+  console.log("version!", args);
 }

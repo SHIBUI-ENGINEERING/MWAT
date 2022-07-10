@@ -1,3 +1,3 @@
-export function upgrade() {
-  console.log("upgrade!");
+export function upgrade(args: string[]) {
+  console.log("upgrade!", args);
 }

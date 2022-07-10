@@ -10,19 +10,19 @@ function parseArgs(args: string[]) {
 
   switch (args[0]) {
     case "help":
-      commands.help();
+      commands.help(args);
       break;
     case "version":
-      commands.version();
+      commands.version(args);
       break;
     case "upgrade":
-      commands.upgrade();
+      commands.upgrade(args);
       break;
     case "run":
-      commands.run();
+      commands.run(args);
       break;
     default:
-      commands.help();
+      commands.help(args);
   }
 }
 
