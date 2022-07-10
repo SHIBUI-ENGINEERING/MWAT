@@ -27,8 +27,6 @@ function parseArgs(args: string[]) {
 }
 
 function main(args: string[]): void {
-  new Logger().debug("test debug log");
-
   parseArgs(args);
 }
 

@@ -1,6 +1,6 @@
 // deno-lint-ignore-file
-import { Action, ITask, Result } from "../src/ITask.ts";
-import { IWorkflow } from "../src/IWorkflow.ts";
+import { Action, ITask, Result } from "../src/types/ITask.ts";
+import { IWorkflow } from "../src/types/IWorkflow.ts";
 
 const task2: ITask = {
   name: "Task 2",
@@ -8,7 +8,7 @@ const task2: ITask = {
     return Action.allow();
   },
   exec: async () => {
-    return Result.sucsess();
+    return Result.success();
   },
 };
 
@@ -18,7 +18,7 @@ const task1: ITask = {
     return Action.allow();
   },
   exec: async () => {
-    return Result.sucsess(task2.name);
+    return Result.success(task2.name);
   },
 };
 
@@ -28,7 +28,7 @@ const task0: ITask = {
     return Action.allow();
   },
   exec: async () => {
-    return Result.sucsess(task1.name);
+    return Result.success(task1.name);
   },
 };
 

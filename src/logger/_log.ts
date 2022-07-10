@@ -1,4 +1,4 @@
-import { colorize, COLORS } from "./_colors.ts";
+import { COLOR, colorize } from "./colors.ts";
 
 export enum LEVEL {
   LOG,
@@ -18,13 +18,21 @@ const LEVEL_NAMES = [
   "FATAL",
 ];
 
+const LEVEL_COLORS = [
+  COLOR.DEFAULT,
+  COLOR.RED,
+];
+
 export class Logger {
   constructor() {
   }
 
-  log(type: LEVEL, msg: string, ...data: object[]) {
+  log(level: LEVEL, msg: string, ...data: object[]) {
     const time = new Date().toISOString();
-    const str = `${time} [${LEVEL_NAMES[type]}] ${msg} ` +
+    const str =
+      `${time} [ ${
+        colorize(LEVEL_COLORS[level], `${LEVEL_NAMES[level]}`)
+      } ] - ${colorize(LEVEL_COLORS[level], msg)} ` +
       (data.length ? `DATA: ${JSON.stringify(data, null, 2)}` : "");
     console.log(str);
   }

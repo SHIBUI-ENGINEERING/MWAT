@@ -1,18 +1,20 @@
+import { GREEN, MAGANTA, YELLOW } from "./logger/colors.ts";
+
 export const STR_CLI_WELCOME = () => `
 
 `;
 
 export const STR_CLI_HELP = () => `
-MWAT - Micro Workflow Automation Tool
+${MAGANTA("MWAT - Micro Workflow Automation Tool")}
 
 USAGE:
-  mwat [SUBCOMMAND] [OPTIONS]
+  ${MAGANTA("mwat")} [${GREEN("SUBCOMMAND")}] [${YELLOW("OPTIONS")}]
 
 SUBCOMMANDS:
-1) run {PATH_TO_WORKFLOW}
-2) help
-3) version
-4) upgrade
+1) ${GREEN("run")} {PATH_TO_WORKFLOW}
+2) ${GREEN("help")}
+3) ${GREEN("version")}
+4) ${GREEN("upgrade")}
 `;
 
 export const STR_CLI_NEW_VESRSIN = (
