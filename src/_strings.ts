@@ -1,4 +1,4 @@
-import { GREEN, MAGANTA, YELLOW } from "./logger/colors.ts";
+import { BLUE, GREEN, MAGANTA, YELLOW } from "./logger/colors.ts";
 
 export const STR_CLI_WELCOME = () => `
 
@@ -15,6 +15,10 @@ SUBCOMMANDS:
 2) ${GREEN("help")}
 3) ${GREEN("version")}
 4) ${GREEN("upgrade")}
+
+MORE DOCUMENTATION: ${
+  BLUE("https://github.com/SHIBUI-ENGINEERING/MWAT/blob/main/README.md")
+}
 `;
 
 export const STR_CLI_HELP_RUN = () => `
