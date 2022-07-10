@@ -15,7 +15,7 @@ export async function run(args: string[]) {
 
   console.log("PATHS:", Deno.cwd(), relatiovePath, absolutePath);
 
-  const workflowModule = await import(absolutePath);
+  const workflowModule = await import(`file://${absolutePath}`);
 
   console.log(workflowModule);
 }
