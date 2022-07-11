@@ -2,7 +2,7 @@ import * as commands from "./commands/_mod.ts";
 import { STR_CLI_HELP } from "../_strings.ts";
 import { Logger } from "../logger/mod.ts";
 
-const logger = new Logger()
+const logger = new Logger();
 
 function parseArgs(args: string[]) {
   if (args.length == 0) {
